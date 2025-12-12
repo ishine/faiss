@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="simdlib__avx2_8h" kind="file" language="C++">
     <compoundname>simdlib_avx2.h</compoundname>
     <includes local="no">cstdint</includes>
     <includes local="no">string</includes>
     <includes local="no">immintrin.h</includes>
     <includes refid="platform__macros_8h" local="no">faiss/impl/platform_macros.h</includes>
+    <includedby refid="simdlib__avx512_8h" local="no">faiss/utils/simdlib_avx512.h</includedby>
     <incdepgraph>
       <node id="5">
         <label>faiss/impl/platform_macros.h</label>
@@ -14,15 +15,6 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>cstdint</label>
-      </node>
-      <node id="4">
-        <label>immintrin.h</label>
-      </node>
-      <node id="3">
-        <label>string</label>
       </node>
       <node id="1">
         <label>faiss/utils/simdlib_avx2.h</label>
@@ -36,10 +28,31 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
       <node id="6">
         <label>cstdio</label>
       </node>
+      <node id="4">
+        <label>immintrin.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>faiss/utils/simdlib_avx2.h</label>
+        <link refid="simdlib__avx2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>faiss/utils/simdlib_avx512.h</label>
+        <link refid="simdlib__avx512_8h_source"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="structfaiss_1_1simd256bit" prot="public">faiss::simd256bit</innerclass>
     <innerclass refid="structfaiss_1_1simd16uint16" prot="public">faiss::simd16uint16</innerclass>
     <innerclass refid="structfaiss_1_1simd32uint8" prot="public">faiss::simd32uint8</innerclass>
@@ -51,8 +64,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/**</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>Facebook,<sp/>Inc.<sp/>and<sp/>its<sp/>affiliates.</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>Meta<sp/>Platforms,<sp/>Inc.<sp/>and<sp/>affiliates.</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>source<sp/>code<sp/>is<sp/>licensed<sp/>under<sp/>the<sp/>MIT<sp/>license<sp/>found<sp/>in<sp/>the</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>LICENSE<sp/>file<sp/>in<sp/>the<sp/>root<sp/>directory<sp/>of<sp/>this<sp/>source<sp/>tree.</highlight></codeline>
@@ -74,7 +87,7 @@
 <codeline lineno="21"><highlight class="comment"><sp/>*<sp/>The<sp/>objective<sp/>is<sp/>to<sp/>separate<sp/>the<sp/>different<sp/>interpretations<sp/>of<sp/>the<sp/>same</highlight></codeline>
 <codeline lineno="22"><highlight class="comment"><sp/>*<sp/>registers<sp/>(as<sp/>a<sp/>vector<sp/>of<sp/>uint8,<sp/>uint16<sp/>or<sp/>uint32),<sp/>to<sp/>provide<sp/>printing</highlight></codeline>
 <codeline lineno="23"><highlight class="comment"><sp/>*<sp/>functions,<sp/>and<sp/>to<sp/>give<sp/>more<sp/>readable<sp/>names<sp/>to<sp/>the<sp/>AVX<sp/>intrinsics.<sp/>It<sp/>does<sp/>not</highlight></codeline>
-<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>pretend<sp/>to<sp/>be<sp/>exhausitve,<sp/>functions<sp/>are<sp/>added<sp/>as<sp/>needed.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>pretend<sp/>to<sp/>be<sp/>exhaustive,<sp/>functions<sp/>are<sp/>added<sp/>as<sp/>needed.</highlight></codeline>
 <codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment"></highlight></codeline>
 <codeline lineno="27"><highlight class="comment">///<sp/>256-bit<sp/>representation<sp/>without<sp/>interpretation<sp/>as<sp/>a<sp/>vector</highlight></codeline>

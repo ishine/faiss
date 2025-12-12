@@ -1,28 +1,30 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structfaiss_1_1CodePackerPQ4" kind="struct" language="C++" prot="public">
     <compoundname>faiss::CodePackerPQ4</compoundname>
     <basecompoundref refid="structfaiss_1_1CodePacker" prot="public" virt="non-virtual">faiss::CodePacker</basecompoundref>
     <includes refid="pq4__fast__scan_8h" local="no">pq4_fast_scan.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structfaiss_1_1CodePackerPQ4_1a828350b663e01a7fa7010b6a73546622" prot="public" static="no" mutable="no">
         <type>size_t</type>
         <definition>size_t faiss::CodePackerPQ4::nsq</definition>
         <argsstring></argsstring>
         <name>nsq</name>
+        <qualifiedname>faiss::CodePackerPQ4::nsq</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/impl/pq4_fast_scan.h" line="91" column="12" bodyfile="faiss/impl/pq4_fast_scan.h" bodystart="91" bodyend="-1"/>
+        <location file="faiss/impl/pq4_fast_scan.h" line="100" column="12" bodyfile="faiss/impl/pq4_fast_scan.h" bodystart="100" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfaiss_1_1CodePacker_1a0cf7c6faebbc3f5c7ecf0b54515da956" prot="public" static="no" mutable="no">
         <type>size_t</type>
         <definition>size_t faiss::CodePacker::code_size</definition>
         <argsstring></argsstring>
         <name>code_size</name>
+        <qualifiedname>faiss::CodePacker::code_size</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -36,6 +38,7 @@
         <definition>size_t faiss::CodePacker::nvec</definition>
         <argsstring></argsstring>
         <name>nvec</name>
+        <qualifiedname>faiss::CodePacker::nvec</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -49,6 +52,7 @@
         <definition>size_t faiss::CodePacker::block_size</definition>
         <argsstring></argsstring>
         <name>block_size</name>
+        <qualifiedname>faiss::CodePacker::block_size</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -57,13 +61,14 @@
         </inbodydescription>
         <location file="faiss/impl/CodePacker.h" line="23" column="12" bodyfile="faiss/impl/CodePacker.h" bodystart="23" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="structfaiss_1_1CodePackerPQ4_1a0076019cdf6fcde0e819fa8af799642a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>faiss::CodePackerPQ4::CodePackerPQ4</definition>
         <argsstring>(size_t nsq, size_t bbs)</argsstring>
         <name>CodePackerPQ4</name>
+        <qualifiedname>faiss::CodePackerPQ4::CodePackerPQ4</qualifiedname>
         <param>
           <type>size_t</type>
           <declname>nsq</declname>
@@ -78,13 +83,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/impl/pq4_fast_scan.h" line="93" column="5"/>
+        <location file="faiss/impl/pq4_fast_scan.h" line="102" column="5"/>
       </memberdef>
       <memberdef kind="function" id="structfaiss_1_1CodePackerPQ4_1a57db85858c57120ff1c9e1b5eb9e4c4c" prot="public" static="no" const="yes" explicit="no" inline="no" final="yes" virt="virtual">
         <type>void</type>
         <definition>void faiss::CodePackerPQ4::pack_1</definition>
         <argsstring>(const uint8_t *flat_code, size_t offset, uint8_t *block) const final</argsstring>
         <name>pack_1</name>
+        <qualifiedname>faiss::CodePackerPQ4::pack_1</qualifiedname>
         <reimplements refid="structfaiss_1_1CodePacker_1a94a4b3147227cc8a115a3ce5bec3cdf1">pack_1</reimplements>
         <param>
           <type>const uint8_t *</type>
@@ -104,13 +110,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/impl/pq4_fast_scan.h" line="95" column="10"/>
+        <location file="faiss/impl/pq4_fast_scan.h" line="104" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structfaiss_1_1CodePackerPQ4_1aa9c40fec414f52f336b16a27536fb8a0" prot="public" static="no" const="yes" explicit="no" inline="no" final="yes" virt="virtual">
         <type>void</type>
         <definition>void faiss::CodePackerPQ4::unpack_1</definition>
         <argsstring>(const uint8_t *block, size_t offset, uint8_t *flat_code) const final</argsstring>
         <name>unpack_1</name>
+        <qualifiedname>faiss::CodePackerPQ4::unpack_1</qualifiedname>
         <reimplements refid="structfaiss_1_1CodePacker_1a0b4468e9cb66b388e275412ced878f30">unpack_1</reimplements>
         <param>
           <type>const uint8_t *</type>
@@ -130,13 +137,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="faiss/impl/pq4_fast_scan.h" line="97" column="10"/>
+        <location file="faiss/impl/pq4_fast_scan.h" line="106" column="10"/>
       </memberdef>
       <memberdef kind="function" id="structfaiss_1_1CodePacker_1a0f530d64acec0bc079caffd3d7ec52e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void faiss::CodePacker::pack_all</definition>
         <argsstring>(const uint8_t *flat_codes, uint8_t *block) const</argsstring>
         <name>pack_all</name>
+        <qualifiedname>faiss::CodePacker::pack_all</qualifiedname>
         <reimplementedby refid="structfaiss_1_1CodePackerFlat_1ae59ad6a701aae0f810f6aa3e9aa1acfa">pack_all</reimplementedby>
         <param>
           <type>const uint8_t *</type>
@@ -159,6 +167,7 @@
         <definition>virtual void faiss::CodePacker::unpack_all</definition>
         <argsstring>(const uint8_t *block, uint8_t *flat_codes) const</argsstring>
         <name>unpack_all</name>
+        <qualifiedname>faiss::CodePacker::unpack_all</qualifiedname>
         <reimplementedby refid="structfaiss_1_1CodePackerFlat_1ab2ef89a0154f83d8b7b2124e970b2895">unpack_all</reimplementedby>
         <param>
           <type>const uint8_t *</type>
@@ -176,7 +185,7 @@
         </inbodydescription>
         <location file="faiss/impl/CodePacker.h" line="49" column="18"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -206,7 +215,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="faiss/impl/pq4_fast_scan.h" line="90" column="1" bodyfile="faiss/impl/pq4_fast_scan.h" bodystart="90" bodyend="99"/>
+    <location file="faiss/impl/pq4_fast_scan.h" line="99" column="1" bodyfile="faiss/impl/pq4_fast_scan.h" bodystart="99" bodyend="108"/>
     <listofallmembers>
       <member refid="structfaiss_1_1CodePacker_1a665417892dc2cdd1abc38f209c93d7d6" prot="public" virt="non-virtual"><scope>faiss::CodePackerPQ4</scope><name>block_size</name></member>
       <member refid="structfaiss_1_1CodePacker_1a0cf7c6faebbc3f5c7ecf0b54515da956" prot="public" virt="non-virtual"><scope>faiss::CodePackerPQ4</scope><name>code_size</name></member>
